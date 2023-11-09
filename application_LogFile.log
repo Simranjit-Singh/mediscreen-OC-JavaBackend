@@ -1,0 +1,36 @@
+2023-11-08 21:36:58.897  INFO 22700 --- [restartedMain] c.m.p.PatientServiceApplication          : Starting PatientServiceApplication using Java 17.0.6 on LAPTOP-PN5D3RE4 with PID 22700 (D:\prog_web\prog\Project 9\practice\mycode\prod\Mediscreen\patient-service\target\classes started by igoro in D:\prog_web\prog\Project 9\practice\mycode\prod\Mediscreen)
+2023-11-08 21:36:58.900  INFO 22700 --- [restartedMain] c.m.p.PatientServiceApplication          : The following 1 profile is active: "docker"
+2023-11-08 21:36:58.933  INFO 22700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-08 21:36:58.934  INFO 22700 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-08 21:36:59.343  INFO 22700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-08 21:36:59.380  INFO 22700 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2023-11-08 21:36:59.483  INFO 22700 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4d9d3494-049f-318a-bd0b-e01934516b8d
+2023-11-08 21:36:59.834  INFO 22700 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8071 (http)
+2023-11-08 21:36:59.840  INFO 22700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-08 21:36:59.840  INFO 22700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2023-11-08 21:36:59.909  INFO 22700 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-08 21:36:59.910  INFO 22700 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 976 ms
+2023-11-08 21:36:59.944  WARN 22700 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine suitable jdbc url
+2023-11-08 21:36:59.945  INFO 22700 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-08 21:36:59.957  INFO 22700 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-08 21:36:59.970 ERROR 22700 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine suitable jdbc url
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles docker are currently active).
+
